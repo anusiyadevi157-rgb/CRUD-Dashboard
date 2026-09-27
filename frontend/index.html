@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>CRUD Dashboard</h1>
+            <p>Manage your users easily</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Add User -->
+        <section class="card">
+            <h2>Add User</h2>
+
+            <form id="addForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter Email" required>
+                </div>
+
+                <button type="submit">Add User</button>
+            </form>
+        </section>
+
+        <!-- Edit User -->
+        <section class="card">
+            <h2>Edit User</h2>
+
+            <form id="editForm">
+                <div class="form-group">
+                    <label for="editName">Name</label>
+                    <input type="text" id="editName" placeholder="Enter new name">
+                </div>
+
+                <div class="form-group">
+                    <label for="editEmail">Email</label>
+                    <input type="email" id="editEmail" placeholder="Enter new email">
+                </div>
+
+                <button type="submit">Update User</button>
+            </form>
+        </section>
+
+        <!-- Users -->
+        <section class="card">
+
+            <div class="section-title">
+                <h2>Users</h2>
+                <span>Manage Users</span>
+            </div>
+
+            <!-- Search -->
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search users by name or email..."
+                >
+            </div>
+
+            <div class="table-container">
+                <table id="userTable">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
